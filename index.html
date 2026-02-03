@@ -13,12 +13,12 @@
   <style>
     :root {
       color-scheme: light;
-      --bg: #f6f8ff;
+      --bg: #f3f6ff;
       --card: #ffffff;
-      --accent: #5b4dff;
-      --accent-strong: #2f2b6b;
-      --accent-soft: rgba(91, 77, 255, 0.12);
-      --text: #101828;
+      --accent: #4c6fff;
+      --accent-strong: #1f2a6b;
+      --accent-soft: rgba(76, 111, 255, 0.12);
+      --text: #0b1220;
       --muted: #667085;
       --border: rgba(148, 163, 184, 0.2);
     }
@@ -31,7 +31,7 @@
 
     body {
       font-family: "Inter", "Noto Sans JP", system-ui, -apple-system, sans-serif;
-      background: radial-gradient(circle at top, #eef1ff 0%, #f6f8ff 40%, #ffffff 100%);
+      background: radial-gradient(circle at top, #edf2ff 0%, #f3f6ff 40%, #ffffff 100%);
       color: var(--text);
       min-height: 100vh;
       display: flex;
@@ -43,7 +43,7 @@
     .page {
       width: min(980px, 100%);
       background: var(--card);
-      border-radius: 32px;
+      border-radius: 34px;
       overflow: hidden;
       box-shadow: 0 24px 70px rgba(15, 23, 42, 0.16);
       border: 1px solid var(--border);
@@ -51,36 +51,35 @@
 
     .hero {
       position: relative;
-      height: 440px;
+      height: 460px;
       display: flex;
       align-items: flex-end;
       padding: 40px;
-      background: linear-gradient(135deg, rgba(91, 77, 255, 0.9), rgba(88, 141, 255, 0.8));
+      background: linear-gradient(135deg, rgba(76, 111, 255, 0.9), rgba(80, 171, 255, 0.78));
     }
 
     .hero::before {
       content: "";
       position: absolute;
       inset: 0;
-      background: url("https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1800&q=80")
+      background: url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1800&q=80")
         center/cover no-repeat;
-      filter: saturate(1.15);
-      opacity: 0.7;
+      filter: saturate(1.1);
+      opacity: 0.75;
     }
 
     .hero::after {
       content: "";
       position: absolute;
       inset: 0;
-      background: linear-gradient(180deg, rgba(9, 15, 35, 0) 5%, rgba(9, 15, 35, 0.75) 85%);
+      background: linear-gradient(180deg, rgba(6, 12, 28, 0) 5%, rgba(6, 12, 28, 0.78) 85%);
     }
 
     .hero-content {
       position: relative;
       z-index: 1;
       color: #f8fafc;
-      max-width: 520px;
-      backdrop-filter: blur(2px);
+      max-width: 540px;
     }
 
     .tag {
@@ -89,7 +88,7 @@
       gap: 8px;
       padding: 8px 14px;
       border-radius: 999px;
-      background: rgba(255, 255, 255, 0.22);
+      background: rgba(255, 255, 255, 0.24);
       border: 1px solid rgba(255, 255, 255, 0.28);
       font-size: 14px;
       font-weight: 500;
@@ -101,18 +100,18 @@
       font-size: clamp(28px, 4vw, 44px);
       font-weight: 700;
       line-height: 1.2;
-      text-shadow: 0 12px 32px rgba(9, 15, 35, 0.45);
+      text-shadow: 0 12px 32px rgba(6, 12, 28, 0.45);
     }
 
     .hero p {
       margin-top: 12px;
       font-size: 16px;
-      color: rgba(248, 250, 252, 0.92);
+      color: rgba(248, 250, 252, 0.94);
       line-height: 1.7;
     }
 
     .hero-meta {
-      margin-top: 18px;
+      margin-top: 20px;
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
@@ -124,7 +123,7 @@
       gap: 8px;
       padding: 6px 12px;
       border-radius: 999px;
-      background: rgba(15, 23, 42, 0.35);
+      background: rgba(11, 18, 32, 0.4);
       border: 1px solid rgba(255, 255, 255, 0.18);
       font-size: 13px;
       font-weight: 500;
@@ -135,14 +134,26 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 20px;
-      padding: 36px 40px 44px;
-      background: #f9f9ff;
+      padding: 38px 40px 46px;
+      background: #f7f8ff;
+    }
+
+    .wave {
+      display: block;
+      width: 100%;
+      background: #f7f8ff;
+    }
+
+    .wave svg {
+      display: block;
+      width: 100%;
+      height: 52px;
     }
 
     .detail-card {
       background: var(--card);
       border-radius: 18px;
-      padding: 24px;
+      padding: 24px 26px;
       border: 1px solid var(--border);
       box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
       display: flex;
@@ -208,6 +219,15 @@
         </div>
       </div>
     </section>
+
+    <div class="wave" aria-hidden="true">
+      <svg viewBox="0 0 1440 90" preserveAspectRatio="none" role="presentation">
+        <path
+          d="M0,20 C240,70 480,70 720,40 C960,10 1200,10 1440,50 L1440,90 L0,90 Z"
+          fill="#f7f8ff"
+        ></path>
+      </svg>
+    </div>
 
     <section class="details">
       <div class="detail-card">
