@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>社内AI勉強会｜告知ページ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f5f7fb;
+        --card: #ffffff;
+        --ink: #1b1f2a;
+        --muted: #65708a;
+        --accent: #4f46e5;
+        --accent-soft: rgba(79, 70, 229, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Noto Sans JP", system-ui, -apple-system, sans-serif;
+        background: radial-gradient(circle at top, #ffffff 0%, var(--bg) 60%);
+        color: var(--ink);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 32px 16px;
+      }
+
+      .page {
+        width: min(1080px, 100%);
+      }
+
+      .hero-card {
+        background: var(--card);
+        border-radius: 28px;
+        box-shadow: 0 30px 60px rgba(19, 24, 39, 0.12);
+        overflow: hidden;
+      }
+
+      .hero-image {
+        position: relative;
+        height: 360px;
+        background: linear-gradient(120deg, rgba(79, 70, 229, 0.9), rgba(16, 185, 129, 0.85)),
+          url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1400&q=80")
+            center/cover no-repeat;
+      }
+
+      .hero-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, rgba(15, 23, 42, 0.2) 0%, rgba(15, 23, 42, 0.6) 100%);
+        display: flex;
+        align-items: flex-end;
+        padding: 32px 40px;
+        color: #fff;
+      }
+
+      .hero-overlay h1 {
+        margin: 0;
+        font-size: clamp(28px, 4vw, 40px);
+        font-weight: 700;
+        letter-spacing: 0.04em;
+      }
+
+      .hero-overlay p {
+        margin: 12px 0 0;
+        font-size: 16px;
+        opacity: 0.9;
+      }
+
+      .info-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+        padding: 32px 40px 40px;
+        background: var(--card);
+      }
+
+      .info-card {
+        background: #f8f9ff;
+        border-radius: 18px;
+        padding: 20px 22px;
+        border: 1px solid rgba(79, 70, 229, 0.08);
+        display: grid;
+        gap: 8px;
+      }
+
+      .info-card span {
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--accent);
+        letter-spacing: 0.08em;
+      }
+
+      .info-card strong {
+        font-size: 18px;
+        font-weight: 600;
+      }
+
+      .info-card p {
+        margin: 0;
+        font-size: 14px;
+        color: var(--muted);
+        line-height: 1.6;
+      }
+
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: var(--accent-soft);
+        color: var(--accent);
+        border-radius: 999px;
+        padding: 6px 14px;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        margin-bottom: 16px;
+      }
+
+      @media (max-width: 720px) {
+        .hero-image {
+          height: 280px;
+        }
+
+        .hero-overlay {
+          padding: 24px;
+        }
+
+        .info-grid {
+          padding: 24px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <section class="hero-card">
+        <div class="hero-image">
+          <div class="hero-overlay">
+            <div>
+              <div class="badge">AI Learning Meetup</div>
+              <h1>社内AI勉強会 2024</h1>
+              <p>最新トレンドと活用事例を、やさしく・実践的に学び合う時間。</p>
+            </div>
+          </div>
+        </div>
+        <div class="info-grid">
+          <div class="info-card">
+            <span>タイトル</span>
+            <strong>生成AIと業務改革</strong>
+            <p>導入ロードマップとチームでの活用ポイントを共有します。</p>
+          </div>
+          <div class="info-card">
+            <span>開催日時</span>
+            <strong>2024年9月12日（木）19:00 - 20:30</strong>
+            <p>受付開始 18:40 / オンライン参加も可能です。</p>
+          </div>
+          <div class="info-card">
+            <span>場所</span>
+            <strong>本社 8F イノベーションラウンジ</strong>
+            <p>アクセス：エレベーターで8階へお越しください。</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
